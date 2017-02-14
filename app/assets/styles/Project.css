@@ -1,0 +1,198 @@
+#project-container {
+  width: calc(100vw - 65px);
+  min-height: 100%;
+  background-color: #ddd2ce;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.project-headings {
+  font-size: 16px;
+  font-weight: 400;
+  width: 100%;
+  height: 100%;
+}
+.flex-box-parent {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: center;
+}
+
+.flex-box-child {
+  background: #c1b8b4;
+  padding: 5px;
+  width: 300px;
+  height: 80px;
+  margin: 2%;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,.2);
+  line-height: 70px;
+  color: #3e3e3e;
+  font-weight: 700;
+  font-size: 3em;
+  text-align: center;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+.second-flex {
+  align-items: flex-end;
+}
+
+#project-overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ddd2ce;
+    overflow-y: hidden;
+}
+
+.overlay-main-project-container, .overlay-hobby-project-container{
+  color: #3e3e3e;
+  height: 90%;
+  width: 90%;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  /*background-color: #ffd152;*/
+  overflow-y: hidden;
+  transition: 1s;
+  border-radius: 5px;
+  box-shadow: 0 1px 10px 0 rgba(0,0,0,.2);
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  margin: 0 auto;
+  justify-content: center;
+  -webkit-flex-flow: row wrap;
+
+}
+.overlay-main-project-container{
+  align-items: center;
+}
+
+.overlay-main-project-image {
+  width: 40%;
+  margin: 2%;
+}
+.overlay-hobby-project-image {
+  width: 30%;
+  margin: 1%;
+}
+.overlay-main-project-image, .overlay-hobby-project-image{
+  height:70%;
+  position: relative;
+}
+
+.overlay-main-project-image img, .overlay-hobby-project-image img{
+  box-shadow: 0 10px 50px 0 rgba(0,0,0,.4), 0 5px 10px 0 rgba(0,0,0,.2);
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.overlay-hobby-project-image img{
+  display: block;
+}
+.overlay-main-project-image img{
+  position: absolute;
+}
+.overlay-main-project-content {
+  height: 60%;
+  width: 40%;
+  margin: 2%;
+}
+.overlay-hobby-project-container:target {
+  background-color: #000000;
+}
+.overlay-main-project-content h3{
+  text-align: center;
+  margin-bottom: 10%;
+
+}
+.overlay-main-project-content .sub-heading{
+  display: inline-block;
+  margin-right: 6%;
+  font-size: 15px;
+  min-width: 90px;
+  font-weight: 500;
+}
+.overlay-main-project-content p{
+  font-size: 14px;
+  text-align: justify;
+  display: inline-block;
+}
+.overlay-main-project-content li{
+  margin-top: 3%;
+  text-align: left;
+}
+
+.overlay-main-project-content ul{
+  list-style: none;
+  padding: 0;
+}
+
+.overlay-content {
+    position: relative;
+    top: 10%;
+    max-width: 700px;
+    text-align: center;
+    overflow: hidden;
+}
+
+@media screen and (max-height: 100%) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+.flex-box-child:active, .flex-box-child:hover {
+  background: #b5aca8;
+}
+
+.thing-appear {
+  opacity: 0;
+}
+
+.thing-appear.thing-appear-active {
+  opacity: 1;
+  transition: opacity .3s ease-in;
+}
+.thing-enter{
+  left:-90%;
+}
+
+.thing-enter.thing-enter-active {
+  left:30px;
+}
+/*#9ec580
+#bae692
+#cceab0
+#fdd157
+#f5d26f
+#fbe197
+#cacad0*/

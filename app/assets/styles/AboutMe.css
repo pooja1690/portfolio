@@ -1,14 +1,35 @@
 #about-me-container {
-  width: 100%;
+  width: calc(100vw - 65px);
   height: 100%;
-  background-color: #DDD2CE;
+  background-color: #c9ccce;
 }
 
 .about-me-content {
-  background: rgb(15,25,32,0.3);
+  background: #9f9a9b;
   /*margin: 10% 10% 20% 15%;*/
   top: 100px;
   height: 70%;
   box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.2), 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+}
+.about-us-vertical-line
+{
+    position:absolute;;
+    top:0;
+    left:95%;
+    bottom:0; margin:0;
+    border:none;
+    height: 100%;
+    border-right:solid 0.5px #0F1920;
+    z-index:1;
+}
+.about-us-horizontal-line {
+  position:absolute;;
+  top:10%;
+  bottom:0; margin:0;
+  border:none;
+  width: 150vw;
+  left: -50%;
+  border-top:solid 0.5px #0F1920;
+  z-index:1;
 }

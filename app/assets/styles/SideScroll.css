@@ -1,0 +1,45 @@
+.side-scroll {
+  background: #0f1920;
+  width: 65px;
+  padding-top: 2%;
+  height: 100vh;
+  right: 0;
+  position: fixed;
+  color:#b68958;
+}
+
+.side-scroll .scroll-content {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  white-space: nowrap;
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+.sidebar-appear {
+  opacity: 0;
+}
+
+.sidebar-appear.sidebar-appear-active {
+  opacity: 1;
+  transition: opacity .3s ease-in;
+}
+
+.sidebar-enter {
+  opacity: 0;
+}
+
+.sidebar-enter.sidebar-enter-active {
+  opacity: 1;
+  transition: opacity .3s ease-in;
+}
+.sidebar-leave {
+  opacity: 1;
+}
+
+.sidebar-leave.sidebar-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}

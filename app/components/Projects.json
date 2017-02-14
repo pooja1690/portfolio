@@ -1,0 +1,70 @@
+{
+   "0":{
+      "heading":"iMessage Application",
+      "image":"../assets/images/imessage.jpg",
+      "description":"iMessage app for TripCase, started as my Hackday project. Took to production in less than a week! This app lets a business traveller share his trip item via iMessage",
+      "role":"Prototype & Development",
+      "languages":"Swift",
+      "platforms":"iOS",
+      "backgroundColor":"#9ec580"
+   },
+   "1":{
+      "heading":"PDF Generation Cordova Plugin",
+      "image":"File",
+      "description":"PDF generation Cordova plugin for Receipt Capture feature picks up images stored in local storage to combine and generate PDF.",
+      "role":"Design & Development",
+      "languages":"Objective-C & Java",
+      "platforms":"iOS & Android",
+      "backgroundColor":"#bae692"
+   },
+   "2":{
+      "heading":"Onboarding UI",
+      "image":"../assets/images/onboarding.jpg",
+      "description":"Onboarding UI for TripCase was designed to improve the onboarding process for TripCase customers.",
+      "role":"Development",
+      "languages":"CSS/HTML/JS on BackboneJS",
+      "platforms":"Web",
+      "backgroundColor":"#cceab0"
+   },
+   "3":{
+      "heading":"Watch OS2 Upgrade",
+      "image":"file",
+      "description":"Upgrade project from Watch OS1 to OS2. Major challenges included maintaining OS1 compatibility and deprecating MMWormHole for OS2",
+      "role":"Maintenance & Compatibility",
+      "languages":"Swift",
+      "platforms":"iOS",
+      "backgroundColor":"#fdd157"
+   },
+   "4":{
+      "heading":"Sync status Cordova Plugin",
+      "image":"../assets/images/reciepts.jpg",
+      "description":"Sync status plugin talks to the native SQLlite3 to add/modify/delete/fetch receipts data that need to be synced to/from AWS be synced to/from AWS be synced to/from AWS.",
+      "role":"Design & Development",
+      "languages":"Objective-C (Core Data)",
+      "platforms":"iOS",
+      "backgroundColor":"#f5d26f"
+   },
+   "5":{
+      "heading":"Memory Mirror POC",
+      "image":"File",
+      "description":"Build a POC which demonstrated capturing Memory Mirror videos customers took in stores straight to their mobile application. Key functionality included dual video playback on the same screen.",
+      "role":"Design & Prototype",
+      "languages":"Objective-C",
+      "platforms":"iOS",
+      "backgroundColor":"#fbe197"
+   },
+   "6":{
+      "heading":"Wedding Venues commonplace",
+      "image":"../assets/images/hobby-vendor-1.jpg",
+      "image2":"../assets/images/hobby-vendor-2.jpg",
+      "description":"Build a POC which demonstrated capturing Memory Mirror videos customers took in stores straight to their mobile application. Key functionality included dual video playback on the same screen.",
+      "backgroundColor":"#cacad0"
+   },
+   "7":{
+      "heading":"Mobile Vendor Application",
+      "image":"../assets/images/hobby-hall-2.jpg",
+      "image2":"../assets/images/hobby-hall-1.jpg",
+      "description":"Build a POC which demonstrated capturing Memory Mirror videos customers took in stores straight to their mobile application. Key functionality included dual video playback on the same screen.",
+      "backgroundColor":"#9ec580"
+    }
+}

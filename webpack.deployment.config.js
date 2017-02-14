@@ -6,9 +6,8 @@ module.exports = {
   devtool: 'source-map',
 
   entry: [
-    './app/index.js',
-    './app/components/Projects.jsx'
-  ],
+    './app/index.js'
+    ],
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -41,12 +40,16 @@ module.exports = {
       },
       {
         test: /\.(jpe|jpg|eot|ttf|svg)(\?.*$|$)/,
-        loaders: ['file-loader?name=/assets/images/[name].[ext]'],
+        loaders: ['url-loader?name=/assets/images/[name].[ext]'],
         include: path.join(__dirname, 'app'),
       },
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loader: 'url-loader?limit=10000&mimetype=application/font-woff'
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
       }
     ]
   },

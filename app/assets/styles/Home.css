@@ -1,3 +1,29 @@
+#home {
+	width: 100vw;
+	height:100%;
+	display:flex;
+	padding:40px;
+	background-color: #0f1920;
+}
+
+.home-image-container {
+	width: 50%;
+	height:100%;
+}
+.home-text-container{
+	width: 50%;
+	height:100%;
+}
+
+.home-image-container {
+	background-color: white;
+}
+.home-text-container {
+	background-color: #0f1920;
+}
+/*#home {
+	width:100vw;
+}
 section{
 	text-align: center;
 }
@@ -40,7 +66,7 @@ section{
 }
 
 .header{
-	/*background-image: url(../images/1.jpg);*/
+	/*background-image: url(../images/1.jpg);
 	background-color: #0F1920;
 	height: 100vh;
 	position: relative;
@@ -59,14 +85,6 @@ section{
 	vertical-align: bottom;;
 }
 
-.coverflow-container {
-	width: 50%;
-	display: table-cell;
-	vertical-align: bottom;;
-}
-.coverflow-container div:first-child{
-background: rgba(0,0,0,0);
-}
 .intro-container p{
 	font-size: 30px;
 	padding-top: 0;
@@ -80,9 +98,14 @@ background: rgba(0,0,0,0);
 	background-repeat: no-repeat;
 	position: relative;
 }
-.bg-img div{
+.menu-container {
 	z-index: 1;
 	position: relative;
+	text-align: center;
+	margin-top: 30vh;
+}
+.menu-container a{
+	color:#b68958;
 }
 .bg-img:after{
 	position: absolute;
@@ -93,7 +116,7 @@ background: rgba(0,0,0,0);
 	top: 0;
 }
 
-/*Radial menu*/
+/*Radial menu
 .header .vira-btn:hover{
 	background-color: #fff;
 	color: #424242;
@@ -141,8 +164,8 @@ background: rgba(0,0,0,0);
   width: 60px;
   padding: 10px;
   background: #dde;
-}*/
-.menu-container .center-circle {
+}
+.menu-containers {
 	border-radius: 50%;
   position: absolute;
   top: 0; left: 0;
@@ -155,7 +178,7 @@ background: rgba(0,0,0,0);
   color: #EBEAE8;
 }
 
-.center-circle:hover p{
+/*.center-circle:hover p{
 	opacity: 0;
 }
 
@@ -209,4 +232,4 @@ svg {
   to {
     stroke-dashoffset: 0;
   }
-}
+}*/
