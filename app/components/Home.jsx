@@ -10,32 +10,86 @@ let degree = Math.PI / 5;
 var angle = degree/2;
 
 class Home extends Component {
+  constructor(props) {
+      super(props);
+      this.state = {
+        shouldAnimateHeading:false
+        // opacity:1,
+      //   pageId:'home',
+      //   pageJump:false
+      };
+      this.changeStateValues = this.changeStateValues.bind(this);
+      this.handleCssForHeading = this.handleCssForHeading.bind(this);
+       this.componentDidMount = this.componentDidMount.bind(this);
+    }
+  componentDidMount () {
+    setTimeout(() => {
+      this.changeStateValues()
+      this.handleCssForHeading()
+      this.handlerCssForContainer()
+      setTimeout(() => {
+        this.handleCssForContent()
+      }, 2000);
+    }, 2000);
+
+  }
+  changeStateValues() {
+    this.setState({shouldAnimateHeading:true});
+  }
+  handleCssForHeading() {
+    if (this.state.shouldAnimateHeading) {
+      var lineHeightValue = '0%';
+      return Object.assign({
+        paddingTop : lineHeightValue,
+        WebkitTransition:'all 2s',
+        WebkitTransform:'2s',
+        transitionTimingFunction:'cubic-bezier(0.25,0.1,0.25,1.1)'
+      });
+    }
+  }
+  handleCssForContent() {
+    if (this.state.shouldAnimateHeading) {
+      return Object.assign({
+        opacity : 1,
+        paddingTop: 0,
+        WebkitTransition:'all 2s',
+        WebkitTransform:'2s',
+        animationDelay:'3s',
+        transitionTimingFunction:'cubic-bezier(0.25,0.1,0.25,1.1)'
+      });
+    }
+  }
+  handlerCssForContainer () {
+    if (this.state.shouldAnimateHeading) {
+      var newWidth = 'calc(100% - 105px)';
+      return Object.assign({
+        width:newWidth,
+        WebkitTransition:'all 1s',
+        WebkitTransform:'1s',
+          transitionTimingFunction:'cubic-bezier(0.25,0.1,0.25,1.1)'
+      })
+    }
+  }
   render() {
     // const collapse = this.state.collapse;
     return (
       <div>
-        <div id="home">
+        <div id="home" style={this.handleMargin}>
           <div className="home-image-container"></div>
-          <div className="home-text-container"></div>
-          {/* <header className="bg-img header">
-            <div className="container">
-              <div className="intro-box">
-                  <div className="intro-container">
-                    <p>Hey There!</p>
-                    <p>I am</p>
-                    <p>Pooja</p>
-                    <p>Kumar</p>
-                    <svg>
-                    <line  x1="0" y1="50" x2="1000" y2="50" className="path" fill="#B68958"
-                      stroke="#B68958" stroke-width="2"/>
-                    </svg>
-                  </div>
-              </div>
-            <div className="menu-container">
-              <a href="#about-me-container" className="fa fa-angle-down fa-4x "></a>
-            </div>
-            </div>
-          </header> */}
+          <div className="home-center-heading-container">
+            <p className="center-heading"
+            style={this.handleCssForHeading()}>
+            HELLO.
+            </p>
+            <p className="center-text" style={this.handleCssForContent()}>
+              I am Pooja Kumar.</p>
+            <p className="center-text" style={this.handleCssForContent()}>
+              A coder who builds to bring a product to reality!
+            </p>
+          </div>
+        <div className="home-scroll-container" style={this.handleCssForContent()}>
+              <a href="#about-me-container" textDecoration="none !important;"><p>scroll</p><hr /></a></div>
+        <div className="home-text-container" style={this.handlerCssForContainer()}></div>
         </div>
       </div>
     );
@@ -43,53 +97,3 @@ class Home extends Component {
 }
 
 export default Home;
-{/* <ul className="radial-menu menu-container">
-{collapse ? (
-  <li><a href="#" onClick={this.handleCollapse} className="center-circle fa fa-long-arrow-up fa-2x"></a></li>
-) : (
-  <li><a href="#" onClick={this.handleExpand} className="center-circle fa fa-long-arrow-up fa-2x"></a></li>
-)}
-<li><a href="#project-container" className="flyout-content fa fa-home fa-2x" style = {this.style()}><p>Contact</p></a></li>
-<li><a href="" className="flyout-content fa fa-facebook fa-2x" style = {this.style()}><p>Test</p></a></li>
-<li><a className="flyout-content fa fa-twitter fa-2x" style = {this.style()}><p>Gallery</p></a></li>
-<li><a href="" className="flyout-content fa fa-linkedin fa-2x" style = {this.style()}><p>Professional</p></a></li>
-<li><a href="" className="flyout-content fa fa-github fa-2x" style = {this.style()}><p>About</p></a></li>
-</ul> */}
-// constructor(props) {
-//   super(props);
-//   this.handleExpand = this.handleExpand.bind(this);
-//   this.handleCollapse = this.handleCollapse.bind(this);
-//   this.imviewed = this.imviewed.bind(this);
-//   this.state = {collapse: true};
-// }
-//
-// componentDidMount() {
-// }
-// handleExpand() {
-//   this.setState({collapse: true});
-// }
-//
-// handleCollapse() {
-//   this.setState({collapse: false});
-// }
-// imviewed () {
-//   console.log("yse");
-// }
-// style() {
-//  if (this.state.collapse) {
-//    angle = degree/2;
-//    return Object.assign({
-//      top: 0,
-//      left: 0
-//    });
-//  } else {
-//    let x = Math.round(radius * Math.sin(angle));
-//    let y = Math.round(radius * Math.cos(angle));
-//    angle = angle + degree;
-//
-//    return Object.assign({
-//      top: -x+40,
-//      left: y
-//    });
-//  }
-// }

@@ -14,8 +14,9 @@
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   white-space: nowrap;
-  font-size: 22px;
+  font-size: 21px;
   margin-top: 20px;
+  letter-spacing: 2px;
 }
 
 .sidebar-appear {

@@ -14,7 +14,11 @@ class FlexChildClass extends Component {
     "Watch OS1 App","Wedding Hall Startup design","Vendor App Design","Vendor App Design"];
 
     return (<div>
-      <div className="project-headings">{projectElements[this.props.boxNumber]}</div>
+      <div className="project-headings"><p>{projectElements[this.props.boxNumber]}
+        <hr className="horizontal-line" />
+        <hr className="vertical-line"/>
+      </p>
+      </div>
     </div>);
   }
 }
@@ -36,6 +40,14 @@ class Project extends Component {
     this.setState({shouldCollapse: false});
     this.setState({childEvent:e});
 
+  }
+
+  componentDidMount() {
+    console.log("from inside projects");
+  }
+
+  componentWillAppear() {
+    console.log("from inside projects appear");
   }
 
   render() {

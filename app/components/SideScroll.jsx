@@ -14,7 +14,6 @@ class SideScroll extends Component {
   handleMargin() {
     var marginLeft = 100*(this.props.opacity) + "px"
     var opacity = 1 - (this.props.opacity)/2;
-    console.log(marginLeft);
     return Object.assign({
       marginLeft: marginLeft,
       opacity:opacity

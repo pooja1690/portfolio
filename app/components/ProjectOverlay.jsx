@@ -1,9 +1,22 @@
 import React, { Component } from 'react';
-import '../assets/styles/Project.css';
+import '../assets/styles/ProjectOverlay.css';
 import Image from './Image.jsx';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group' // ES6
 
 class ProjectOverlay extends Component {
+  constructor(props) {
+      super(props);
+    }
+  componentDidMount () {
+    setTimeout(() => {
+      this.changeProjectOverlayValue()
+    }, 1000);
+  }
+
+  changeProjectOverlayValue() {
+    console.log("overlay render");
+  }
+
   render() {
     var projectData = require('./Projects.json');
 
@@ -15,12 +28,11 @@ class ProjectOverlay extends Component {
 
       return (
         <div id="project-overlay" className="overlay" onClick={(e) => this.props.onClose(e)}>
-          <ReactCSSTransitionGroup transitionName="thing"
-            transitionEnterTimeout={300}
+          <ReactCSSTransitionGroup transitionName="overlay-animation"
+            transitionEnterTimeout={2000}
             transitionEnter={true}
-            transitionLeave={false}
             transitionAppear={true}
-            transitionAppearTimeout={500}>
+            transitionAppearTimeout={2000}>
           <div className="overlay-main-project-container" style = {style}>
             <div className="overlay-main-project-image">
               <Image src={this.props.forChildEvent} />
