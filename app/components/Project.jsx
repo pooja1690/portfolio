@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
-import '../assets/fonts/font-awesome.css';
 import '../assets/styles/Project.css';
 import ProjectOverlay from './ProjectOverlay.jsx';
 import ScrollDownComponent from './ScrollDownComponent.jsx'
-
-function CloseProjectOverlay () {
-  this.setState(Project.shouldCollapse:true);
-  return null;
-}
 
 class FlexChildClass extends Component {
   render() {
@@ -38,6 +32,7 @@ class Project extends Component {
     childEvent:0
     };
   }
+
   handleCloseOverlay(e) {
     this.setState({shouldCollapse: true});
      window.onscroll=function(){};

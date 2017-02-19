@@ -27,16 +27,14 @@
     margin-bottom: 0;
     border: 0;
     border-top: none;
-  -webkit-transition: width .6s ease-out;
-  transition: width .6s ease-out;
+    -webkit-transition: width .6s ease-out;
+    transition: width .6s ease-out;
 }
-
 .contact-email:hover hr {
   width:450px;
   -webkit-transition: width .6s cubic-bezier(0.18, 0.89, 0.32, 1.28);
   transition: width width .6s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
-
 .contact-title {
   color: #e28600;
   font-weight: 400;

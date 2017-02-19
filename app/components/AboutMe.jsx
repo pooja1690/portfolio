@@ -5,10 +5,12 @@ import ScrollDownComponent from './ScrollDownComponent.jsx'
 class AboutMe extends Component {
   constructor(props) {
       super(props);
-    }
+  }
+
   componentDidMount () {
     this.handleCssForContent()
   }
+
   handleCssForContent() {
       return Object.assign({
         opacity : 1,
@@ -19,6 +21,7 @@ class AboutMe extends Component {
         transitionTimingFunction:'cubic-bezier(0.25,0.1,0.25,1.1)'
       });
   }
+  
   render() {
     return (
       <div id="about-me-container">

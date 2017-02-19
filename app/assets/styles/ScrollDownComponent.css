@@ -21,3 +21,19 @@
 	animation: bounce 1s cubic-bezier(0.7, 0, 0.3, 1) infinite alternate;
 	-webkit-animation: bounce 1s cubic-bezier(0.7, 0, 0.3, 1) infinite alternate;
 }
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}

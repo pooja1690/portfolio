@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../assets/styles/Contact.css';
+import '../assets/fonts/font-awesome.css';
 
 class Contact extends Component {
   render() {

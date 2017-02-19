@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import 'react-bootstrap';
 import '../assets/styles/Home.css';
-import { Link } from 'react-router';
-import SmoothScroll from 'smoothscroll'
 import ScrollDownComponent from './ScrollDownComponent.jsx'
 
 class Home extends Component {
@@ -13,22 +10,21 @@ class Home extends Component {
       };
       this.changeStateValues = this.changeStateValues.bind(this);
       this.handleCssForHeading = this.handleCssForHeading.bind(this);
-       this.componentDidMount = this.componentDidMount.bind(this);
-    }
+  }
+
   componentDidMount () {
     setTimeout(() => {
       this.changeStateValues()
       this.handleCssForHeading()
       this.handlerCssForContainer()
-      setTimeout(() => {
-        this.handleCssForContent()
-      }, 2000);
+      this.handleCssForContent()
     }, 2000);
-
   }
+
   changeStateValues() {
     this.setState({shouldAnimateHeading:true});
   }
+
   handleCssForHeading() {
     if (this.state.shouldAnimateHeading) {
       var lineHeightValue = '0%';
@@ -40,6 +36,7 @@ class Home extends Component {
       });
     }
   }
+
   handleCssForContent() {
     if (this.state.shouldAnimateHeading) {
       return Object.assign({
@@ -47,11 +44,11 @@ class Home extends Component {
         paddingTop: 0,
         WebkitTransition:'all 2s',
         WebkitTransform:'2s',
-        animationDelay:'3s',
         transitionTimingFunction:'cubic-bezier(0.25,0.1,0.25,1.1)'
       });
     }
   }
+
   handlerCssForContainer () {
     if (this.state.shouldAnimateHeading) {
       var newWidth = 'calc(100% - 105px)';
@@ -59,10 +56,11 @@ class Home extends Component {
         width:newWidth,
         WebkitTransition:'all 1s',
         WebkitTransform:'1s',
-          transitionTimingFunction:'cubic-bezier(0.25,0.1,0.25,1.1)'
+        transitionTimingFunction:'cubic-bezier(0.25,0.1,0.25,1.1)'
       })
     }
   }
+  
   render() {
     return (
       <div>

@@ -18,29 +18,3 @@
   margin-top: 20px;
   letter-spacing: 2px;
 }
-
-.sidebar-appear {
-  opacity: 0;
-}
-
-.sidebar-appear.sidebar-appear-active {
-  opacity: 1;
-  transition: opacity .3s ease-in;
-}
-
-.sidebar-enter {
-  opacity: 0;
-}
-
-.sidebar-enter.sidebar-enter-active {
-  opacity: 1;
-  transition: opacity .3s ease-in;
-}
-.sidebar-leave {
-  opacity: 1;
-}
-
-.sidebar-leave.sidebar-leave-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in;
-}

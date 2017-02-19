@@ -38,8 +38,10 @@
 	font-weight: bolder;
 	text-align: center;
 	opacity: 1;
+	color: #e28600;
+	margin: 0;
+	word-break: break-word;
 }
-
 .center-text {
 	font-size: 17px;
 	width: 65%;
@@ -50,24 +52,6 @@
 	padding-top: 20%;
 	padding-left: 200px;
 }
-
-@keyframes bounce {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(-15px);
-  }
-}
-@-webkit-keyframes bounce {
-  from {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(-15px);
-  }
-}
-
 .center-vertically {
   display: table-cell;
   vertical-align: middle;

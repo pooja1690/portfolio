@@ -11,8 +11,6 @@ class ProjectOverlayContent extends Component {
       return null;
     }
     if (this.props.forChildEvent < 6) {
-      var style = {backgroundColor: projectData[this.props.forChildEvent].backgroundColor};
-
       return (
         <div className="overlay-main-project-container">
           <div className="overlay-main-project-image">

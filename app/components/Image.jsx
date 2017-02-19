@@ -4,12 +4,12 @@ import '../assets/styles/Image.css';
 class Image extends Component {
 
   render () {
-    const x = this.props.src;
+    const childEvent = this.props.src;
     var imagepath = "../assets/images/app-store.jpg";
     var imagepath2 = "../assets/images/app-store.jpg";
     var imagepath3 = "../assets/images/app-store.jpg";
 
-    switch(x) {
+    switch(childEvent) {
       case 0 :imagepath = 'https://i.imgsafe.org/671134e2ed.jpg';
         break;
       case 1 :imagepath = 'https://i.imgsafe.org/67107d1c7d.jpg';
@@ -33,7 +33,7 @@ class Image extends Component {
       default:console.log("hello3");
     }
 
-    if (this.props.src < 6) {
+    if (childEvent < 6) {
       return (
         <div>
           <img src={imagepath}/>
@@ -42,10 +42,10 @@ class Image extends Component {
     } else {
       return (
         <div className="overlay-hobby-project-container" style={this.props.backgroundColor}>
-        <div className="overlay-hobby-project-image"><img src={imagepath}/></div>
-        <div className="overlay-hobby-project-image"><img src={imagepath2}/></div>
-        <div className="overlay-hobby-project-image"><img src={imagepath3}/></div>
-      </div>
+          <div className="overlay-hobby-project-image"><img src={imagepath}/></div>
+          <div className="overlay-hobby-project-image"><img src={imagepath2}/></div>
+          <div className="overlay-hobby-project-image"><img src={imagepath3}/></div>
+        </div>
       );
     }
   }

@@ -10,7 +10,8 @@ class ProjectOverlay extends Component {
       }
       this.changeForNextChildEvent = this.changeForNextChildEvent.bind(this);
       this.changeForPreviousChildEvent = this.changeForPreviousChildEvent.bind(this);
-    }
+  }
+
   componentDidMount () {
     setTimeout(() => {
       this.changeProjectOverlayValue()
@@ -20,6 +21,7 @@ class ProjectOverlay extends Component {
   componentWillReceiveProps(nextProps) {
     this.setState({forChildEvent:Number(nextProps.forChildEvent)})
   }
+
   changeProjectOverlayValue() {
     console.log("overlay render");
   }
@@ -31,6 +33,7 @@ class ProjectOverlay extends Component {
       })
     }
   }
+
   changeForPreviousChildEvent() {
     if (this.state.forChildEvent > 0) {
       this.setState({
@@ -38,13 +41,11 @@ class ProjectOverlay extends Component {
       })
     }
   }
-  render() {
-    var projectData = require('./Projects.json');
 
+  render() {
     if (this.props.hideOverlay) {
       return null;
     }
-
     return (
       <div id="project-overlay" className="overlay">
         <div className="overlay-prev-button" onClick={() => this.changeForPreviousChildEvent()}>previous</div>
