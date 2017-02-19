@@ -1,0 +1,78 @@
+.overlay-main-project-container, .overlay-hobby-project-container{
+  color: #e0e0e0;
+  background-color: #5D5957;
+  height: 80%;
+  width: 70%;
+  left: 15%;
+  top: 10%;
+  font-weight: 200;
+  letter-spacing: 1px;
+  position: fixed;
+  z-index: 2;
+  border-radius: 5px;
+  box-shadow: 0 1px 10px 0 rgba(0,0,0,.2);
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  justify-content: center;
+  -webkit-flex-flow: row wrap;
+}
+.overlay-main-project-container{
+  align-items: center;
+}
+
+.overlay-main-project-image {
+  width: 40%;
+  margin: 2%;
+}
+.overlay-hobby-project-image {
+  width: 30%;
+  margin: 1%;
+}
+.overlay-main-project-image, .overlay-hobby-project-image{
+  height:70%;
+  position: relative;
+}
+
+.overlay-hobby-project-image img{
+  display: block;
+}
+.overlay-main-project-image img{
+  position: absolute;
+}
+.overlay-main-project-content {
+  height: 60%;
+  width: 40%;
+  margin: 2%;
+}
+.overlay-hobby-project-container:target {
+  background-color: #000000;
+}
+.overlay-main-project-content h3{
+  text-align: center;
+  margin-bottom: 10%;
+
+}
+.overlay-main-project-content .sub-heading{
+  display: inline-block;
+  margin-right: 6%;
+  font-size: 15px;
+  min-width: 90px;
+  font-weight: 500;
+}
+.overlay-main-project-content p{
+  font-size: 14px;
+  text-align: justify;
+  display: inline-block;
+}
+.overlay-main-project-content li{
+  margin-top: 3%;
+  text-align: left;
+}
+
+.overlay-main-project-content ul{
+  list-style: none;
+  padding: 0;
+}

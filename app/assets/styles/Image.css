@@ -7,12 +7,3 @@ img {
   left: 0;
   right: 0;
 }
-
-.overlay-animation-image-appear {
-  top:50%;
-}
-.overlay-animation-image-appear.overlay-animation-image-appear-active {
-  top:0;
-  transition: top 1s ease-in;
-  -webkit-transition: top 1s ease-in;
-}

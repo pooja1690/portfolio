@@ -10,9 +10,6 @@ class Home extends Component {
       super(props);
       this.state = {
         shouldAnimateHeading:false
-        // opacity:1,
-      //   pageId:'home',
-      //   pageJump:false
       };
       this.changeStateValues = this.changeStateValues.bind(this);
       this.handleCssForHeading = this.handleCssForHeading.bind(this);
@@ -67,7 +64,6 @@ class Home extends Component {
     }
   }
   render() {
-    // const collapse = this.state.collapse;
     return (
       <div>
         <div id="home" style={this.handleMargin}>

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../assets/styles/Image.css';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group' // ES6
 
 class Image extends Component {
 
@@ -36,15 +35,9 @@ class Image extends Component {
 
     if (this.props.src < 6) {
       return (
-        <ReactCSSTransitionGroup transitionName="overlay-animation-image"
-          transitionEnterTimeout={2000}
-          transitionEnter={true}
-          transitionAppear={true}
-          transitionAppearTimeout={2000}>
-          <div>
-            <img src={imagepath}/>
-          </div>
-          </ReactCSSTransitionGroup>
+        <div>
+          <img src={imagepath}/>
+        </div>
       );
     } else {
       return (

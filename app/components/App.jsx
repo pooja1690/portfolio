@@ -7,7 +7,7 @@ import Skills from './Skills.jsx';
 import Project from './Project.jsx';
 import SideScroll from './SideScroll.jsx';
 import '../assets/styles/App.css';
-// import {ScrollPage, Section} from 'react-scrollpage';
+
 var scrollIntoView = require('scroll-into-view');
 
 class App extends Component {
@@ -20,13 +20,10 @@ class App extends Component {
         pageJump:false
       };
       this.handleScroll = this.handleScroll.bind(this);
-      // this.onePageScrollHandler = this.onePageScrollHandler.bind(this);
-      // this.scrollToPage = this.scrollToPage.bind(this);
     }
 
     componentDidMount() {
       window.addEventListener('scroll', this.handleScroll);
-      //  window.addEventListener('wheel', this.onePageScrollHandler);
     }
 
     handleScroll(event) {

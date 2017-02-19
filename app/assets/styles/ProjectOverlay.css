@@ -1,138 +1,54 @@
 #project-overlay {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    z-index: 3;
-    top: 0;
-    left: 0;
-    background-color: #ddd2ce;
-    overflow-y: hidden;
-    display: table;
-}
-
-.overlay-main-project-container, .overlay-hobby-project-container{
-  color: #ffffff;
-  height: 80%;
-  font-weight: 200;
-  width: 70%;
-  left: 15%;
-  top: 10%;
+  height: 100%;
+  width: 100%;
   position: fixed;
-  z-index: 2;
-  border-radius: 5px;
-  box-shadow: 0 1px 10px 0 rgba(0,0,0,.2);
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background-color: #ddd2ce;
+  overflow-y: hidden;
   display: flex;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
+  flex-direction: row;
+  align-items: flex-start;
   justify-content: center;
-  letter-spacing: 1px;
-  -webkit-flex-flow: row wrap;
 }
-.overlay-main-project-container{
-  align-items: center;
-}
-
-.overlay-main-project-image {
-  width: 40%;
-  margin: 2%;
-}
-.overlay-hobby-project-image {
-  width: 30%;
-  margin: 1%;
-}
-.overlay-main-project-image, .overlay-hobby-project-image{
-  height:70%;
-  position: relative;
-}
-
-.overlay-main-project-image img, .overlay-hobby-project-image img{
-
-}
-.overlay-hobby-project-image img{
-  display: block;
-}
-.overlay-main-project-image img{
-  position: absolute;
-}
-.overlay-main-project-content {
-  height: 60%;
-  width: 40%;
-  margin: 2%;
-}
-.overlay-hobby-project-container:target {
-  background-color: #000000;
-}
-.overlay-main-project-content h3{
-  text-align: center;
-  margin-bottom: 10%;
-
-}
-.overlay-main-project-content .sub-heading{
-  display: inline-block;
-  margin-right: 6%;
-  font-size: 15px;
-  min-width: 90px;
-  font-weight: 500;
-}
-.overlay-main-project-content p{
-  font-size: 14px;
-  text-align: justify;
-  display: inline-block;
-}
-.overlay-main-project-content li{
-  margin-top: 3%;
-  text-align: left;
-}
-
-.overlay-main-project-content ul{
-  list-style: none;
-  padding: 0;
-}
-
-.overlay-content {
-    position: relative;
-    top: 10%;
-    max-width: 700px;
+.overlay-next-button, .overlay-prev-button, .overlay-close-button {
+    width: 15%;
     text-align: center;
-    overflow: hidden;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #908987;
 }
-
-@media screen and (max-height: 100%) {
-  .overlay {overflow-y: auto;}
-  .overlay a {font-size: 20px}
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
+.overlay-next-button, .overlay-prev-button {
+  margin: 2%;
+  padding: 2%;
+  position: relative;
+  top: 45%;
 }
-
-.overlay-animation-appear {
-  opacity: 0;
-  left:10%;
+.overlay-close-button {
+  top: 0;
+  position: absolute;
+  right: 0;
+  margin: 2%;
+  padding: 2%;
+  cursor: pointer;
 }
-
-.overlay-animation-appear.overlay-animation-appear-active {
-  opacity: 1;
-  left:0px;
-  transition: all 1s ease;
-  -webkit-transition: all 1s ease;
-}
-
 .overlay-next-button {
-  display: table-cell;
-  vertical-align: middle;
-  float: right;
-  top: 50%;
-  position: fixed;
-  left: 95%;
+  transform: rotate(90deg);
+  cursor: e-resize;
 }
 .overlay-prev-button {
-  position: fixed;
-  display: table-cell;
-  vertical-align: middle;
-  margin: 0 auto;
-  top: 50%;
+  transform: rotate(-90deg);
+  cursor: w-resize;
+}
+
+.overlay-prev-button:hover,
+.overlay-next-button:hover,
+.overlay-close-button:hover {
+  color: #5d5957;
+}
+.overlay-content {
+  width: 70%;
+  height: 100%;
 }

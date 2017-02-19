@@ -14,13 +14,18 @@ class FlexChildClass extends Component {
     var projectElements = ["iMessage App","Generate PDF Plugin","Onboarding UI", "Watch OS2 App","Sync Status plugin",
     "Watch OS1 App","Wedding Hall Startup design","Vendor App Design","Vendor App Design"];
 
-    return (<div>
-      <div className="project-headings"><p>{projectElements[this.props.boxNumber]}
-        <hr className="horizontal-line" />
-        <hr className="vertical-line"/>
-      </p>
+    return (
+      <div>
+        <div className="project-headings">
+          <p>{projectElements[this.props.boxNumber]}</p>
+        </div>
+        <div className="project-hr-lines">
+          <hr className="vertical-line-one" />
+          <hr className="vertical-line-two"/>
+          <hr className="vertical-line-three"/>
+        </div>
       </div>
-    </div>);
+    );
   }
 }
 
