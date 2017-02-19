@@ -2,17 +2,21 @@
     height: 100%;
     width: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     top: 0;
     left: 0;
     background-color: #ddd2ce;
     overflow-y: hidden;
+    display: table;
 }
 
 .overlay-main-project-container, .overlay-hobby-project-container{
-  color: #3e3e3e;
-  height: 90%;
-  width: 90%;
+  color: #ffffff;
+  height: 80%;
+  font-weight: 200;
+  width: 70%;
+  left: 15%;
+  top: 10%;
   position: fixed;
   z-index: 2;
   border-radius: 5px;
@@ -23,6 +27,7 @@
   display: -ms-flexbox;
   display: -webkit-flex;
   justify-content: center;
+  letter-spacing: 1px;
   -webkit-flex-flow: row wrap;
 }
 .overlay-main-project-container{
@@ -112,8 +117,22 @@
 .overlay-animation-appear.overlay-animation-appear-active {
   opacity: 1;
   left:0px;
-  transition: opacity 0.5s ease-in;
-  transition: left 0.5s ease;
-  -webkit-transition: opacity 0.5s ease-in;
-  -webkit-transition: left 0.5s ease;
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+}
+
+.overlay-next-button {
+  display: table-cell;
+  vertical-align: middle;
+  float: right;
+  top: 50%;
+  position: fixed;
+  left: 95%;
+}
+.overlay-prev-button {
+  position: fixed;
+  display: table-cell;
+  vertical-align: middle;
+  margin: 0 auto;
+  top: 50%;
 }

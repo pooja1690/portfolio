@@ -11,17 +11,120 @@
     height: 100%;
 }
 .about-me-content, .about-me-intro {
-  background: #9f9a9b;
-  box-shadow: 0 10px 50px 0 rgba(0,0,0,.2), 0 5px 10px 0 rgba(0,0,0,.2);
   border-radius: 10px;
   width: 40%;
-  height: 60%;
+  height: 100%;
   margin: auto;
+  display: table;
 }
+
+.about-me-intro {
+  max-width: 320px;
+}
+
 .about-me-content-section {
   height: 85%;
   margin: auto;
   display: flex;
   width: 100%;
   justify-content: center;
+}
+
+.about-me-intro p{
+  font-size: 22px;
+  color: ffffff;
+  letter-spacing: 6px;
+  line-height: 60px;
+  display: table;
+}
+
+.about-me-horizontal-line {
+  margin-top: -20px;
+  margin-left: 0;
+  margin-bottom: 0;
+  border: none;
+  width: 20%;
+  background: #e28600;
+  height: 2px;
+  transform-origin: 0% 0%;
+  transform: rotate(0deg);
+  -webkit-transition: all .6s ease-out;
+  transition: all .6s ease-out;
+}
+.about-me-vertical-line {
+  position: relative;
+  margin-top: -80px;
+  border: 0;
+  height: 90px;
+  width: 2px;
+  background: #e28600;
+
+}
+.about-me-intro-package {
+  display:inline-block;
+}
+
+.about-me-intro-package:hover hr{
+  width: 100%;
+  transform-origin: 0% 0%;
+  transform: rotate(-10deg);
+
+  -webkit-transition: all .6s ease-out;
+  transition: all .6s ease-out;
+}
+
+.about-me-intro-package:after hr{
+  width: 20%;
+  transform-origin: 0% 0%;
+  transform: rotate(0deg);
+
+  -webkit-transition: all .6s ease-out;
+  transition: all .6s ease-out;
+}
+
+.about-me-content {
+  color: #fff;
+  font-weight: 200;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-align: justify;
+  display: table;
+}
+
+.about-me-content-rectangle {
+  width: 90%;
+  z-index: 0;
+  position: relative;
+  margin-top: -27%;
+  height: 200px;
+  margin-left: 20%;
+  background-color: rgba(226,134,0,.4);
+  margin-bottom: 0;
+  border: none;
+  border-top: none;
+}
+.about-me-content-triangle {
+  width: 0;
+  height: 0;
+  border-bottom: 40px solid rgba(255, 255, 255, 0.4);
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  margin-left: -10%;
+  top: 10%;
+  border-top: none;
+}
+
+.about-me-content-quote {
+  font-size: 22px;
+  font-weight: 400;
+  text-align: left;
+  color: #e28600;
+  float: right;
+}
+.about-me-content-text {
+  position: relative;
+  max-width: 430px;
+  z-index: 1;
+  margin-top: 5%;
+  float: right;
 }

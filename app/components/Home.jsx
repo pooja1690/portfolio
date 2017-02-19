@@ -3,11 +3,7 @@ import 'react-bootstrap';
 import '../assets/styles/Home.css';
 import { Link } from 'react-router';
 import SmoothScroll from 'smoothscroll'
-
-let isOn = true;
-let radius = 180;
-let degree = Math.PI / 5;
-var angle = degree/2;
+import ScrollDownComponent from './ScrollDownComponent.jsx'
 
 class Home extends Component {
   constructor(props) {
@@ -87,9 +83,8 @@ class Home extends Component {
               A coder who builds to bring a product to reality!
             </p>
           </div>
-        <div className="home-scroll-container" style={this.handleCssForContent()}>
-              <a href="#about-me-container" textDecoration="none !important;"><p>scroll</p><hr /></a></div>
-        <div className="home-text-container" style={this.handlerCssForContainer()}></div>
+          <ScrollDownComponent hrefTo={'#about-me-container'} />
+          <div className="home-text-container" style={this.handlerCssForContainer()}></div>
         </div>
       </div>
     );

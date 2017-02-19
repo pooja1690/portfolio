@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../assets/fonts/font-awesome.css';
 import '../assets/styles/Project.css';
 import ProjectOverlay from './ProjectOverlay.jsx';
+import ScrollDownComponent from './ScrollDownComponent.jsx'
 
 function CloseProjectOverlay () {
   this.setState(Project.shouldCollapse:true);
@@ -34,12 +35,17 @@ class Project extends Component {
   }
   handleCloseOverlay(e) {
     this.setState({shouldCollapse: true});
+     window.onscroll=function(){};
   }
 
   handleExpandOverlay(e) {
-    this.setState({shouldCollapse: false});
+    var x=window.scrollX;
+    var y=window.scrollY;
+    window.onscroll=function(){window.scrollTo(x, y);};
+    this.setState({
+      shouldCollapse: false
+    })
     this.setState({childEvent:e});
-
   }
 
   componentDidMount() {
@@ -58,7 +64,7 @@ class Project extends Component {
             <button className="flex-box-child" onClick={() => this.handleExpandOverlay('0')}>
               <FlexChildClass boxNumber={'0'}/>
             </button>
-          <button className="flex-box-child" onClick={() => this.handleExpandOverlay('1')}>
+            <button className="flex-box-child" onClick={() => this.handleExpandOverlay('1')}>
               <FlexChildClass boxNumber={'1'}/>
             </button>
             <button className="flex-box-child" onClick={() => this.handleExpandOverlay('2')}>
@@ -82,6 +88,9 @@ class Project extends Component {
             <button className="flex-box-child"  onClick={() => this.handleExpandOverlay('8')}>
               <FlexChildClass boxNumber={'8'}/>
             </button>
+          </div>
+        <div className="scroll-section">
+          <ScrollDownComponent hrefTo={'#contact-container'} />
         </div>
       </div>
     );

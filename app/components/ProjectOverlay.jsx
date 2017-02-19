@@ -2,10 +2,16 @@ import React, { Component } from 'react';
 import '../assets/styles/ProjectOverlay.css';
 import Image from './Image.jsx';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group' // ES6
+import ProjectOverlayContent from './ProjectOverlayContent.jsx'
 
 class ProjectOverlay extends Component {
   constructor(props) {
       super(props);
+      this.state = {
+        forChildEvent:0
+      }
+      this.changeForNextChildEvent = this.changeForNextChildEvent.bind(this);
+      this.changeForPreviousChildEvent = this.changeForPreviousChildEvent.bind(this);
     }
   componentDidMount () {
     setTimeout(() => {
@@ -13,10 +19,27 @@ class ProjectOverlay extends Component {
     }, 1000);
   }
 
+  componentWillReceiveProps(nextProps) {
+    this.setState({forChildEvent:Number(nextProps.forChildEvent)})
+  }
   changeProjectOverlayValue() {
     console.log("overlay render");
   }
 
+  changeForNextChildEvent() {
+    if (this.state.forChildEvent < 8) {
+      this.setState({
+        forChildEvent:(this.state.forChildEvent + 1)
+      })
+    }
+  }
+  changeForPreviousChildEvent() {
+    if (this.state.forChildEvent > 0) {
+      this.setState({
+        forChildEvent:(this.state.forChildEvent - 1)
+      })
+    }
+  }
   render() {
     var projectData = require('./Projects.json');
 
@@ -27,27 +50,11 @@ class ProjectOverlay extends Component {
       var style = {backgroundColor: projectData[this.props.forChildEvent].backgroundColor};
 
       return (
-        <div id="project-overlay" className="overlay" onClick={(e) => this.props.onClose(e)}>
-          <ReactCSSTransitionGroup transitionName="overlay-animation"
-            transitionEnterTimeout={2000}
-            transitionEnter={true}
-            transitionAppear={true}
-            transitionAppearTimeout={2000}>
-          <div className="overlay-main-project-container" style = {style}>
-            <div className="overlay-main-project-image">
-              <Image src={this.props.forChildEvent} />
-            </div>
-            <div className="overlay-main-project-content">
-              <h3>{projectData[this.props.forChildEvent].heading}</h3>
-              <ul>
-              <li><p>{projectData[this.props.forChildEvent].description}</p></li>
-              <li><div className="sub-heading">Role: </div><p>{projectData[this.props.forChildEvent].role}</p></li>
-              <li><div className="sub-heading">Languages: </div><p>{projectData[this.props.forChildEvent].languages}</p></li>
-              <li><div className="sub-heading">Platforms: </div><p>{projectData[this.props.forChildEvent].platforms}</p></li>
-            </ul>
-            </div>
-          </div>
-        </ReactCSSTransitionGroup>
+        <div id="project-overlay" className="overlay" onClick={(e) => this.props.onClose(e)} >
+          {/* <div className="overlay-close-button" onClick={(e) => this.props.onClose(e)}>close</div> */}
+          <div className="overlay-prev-button" onClick={() => this.changeForPreviousChildEvent()}>previous</div>
+          <ProjectOverlayContent forChildEvent={this.state.forChildEvent} />
+          <div className="overlay-next-button" onClick={() => this.changeForNextChildEvent()}>next</div>
         </div>
       );
     } else {

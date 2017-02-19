@@ -1,5 +1,57 @@
 #contact-container {
   width: calc(100vw - 65px);
   height: 100%;
-  background-color: #849974;
+  background-color: #1f1f1f;
+  display: table;
+}
+.contact-email p {
+  color: #fff;
+  font-size: 30px;
+  letter-spacing: 5px;
+  font-weight: 300;
+  z-index: 1;
+  position: relative;
+  display: table;
+}
+.contact-email hr {
+  width: 0;
+    float: left;
+    height: 80px;
+    position: relative;
+    background-color: #e28600;
+    left: 25px;
+    display: block;
+    top: -80px;
+    z-index: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border: 0;
+    border-top: none;
+  -webkit-transition: width .6s ease-out;
+  transition: width .6s ease-out;
+}
+
+.contact-email:hover hr {
+  width:450px;
+  -webkit-transition: width .6s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  transition: width width .6s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.contact-title {
+  color: #e28600;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 3px;
+}
+.contact-content {
+  padding-left: 15%;
+  line-height: 60px;
+}
+.fa {
+  color: #fff;
+  text-decoration: none!important;
+  font-weight: 100;
+  padding-top: 25px;
+  display: block;
+  position: absolute;
 }
