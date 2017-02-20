@@ -5,8 +5,8 @@ import ScrollDownComponent from './ScrollDownComponent.jsx'
 
 class FlexChildClass extends Component {
   render() {
-    var projectElements = ["iMessage App","Generate PDF Plugin","Onboarding UI", "Watch OS2 App","Sync Status plugin",
-    "Watch OS1 App","Wedding Hall Startup design","Vendor App Design","Vendor App Design"];
+    var projectElements = ["iMessage App","Generate PDF Plugin","Onboarding UI", "Sync Status plugin",
+    "Vendor App Design", "Wedding Halls Marketplace design"];
 
     return (
       <div>
@@ -79,18 +79,9 @@ class Project extends Component {
             <button className="flex-box-child"  onClick={() => this.handleExpandOverlay('5')}>
               <FlexChildClass boxNumber={'5'}/>
             </button>
-            <button className="flex-box-child"  onClick={() => this.handleExpandOverlay('6')}>
-              <FlexChildClass boxNumber={'6'}/>
-            </button>
-            <button className="flex-box-child"  onClick={() => this.handleExpandOverlay('7')}>
-              <FlexChildClass boxNumber={'7'}/>
-            </button>
-            <button className="flex-box-child"  onClick={() => this.handleExpandOverlay('8')}>
-              <FlexChildClass boxNumber={'8'}/>
-            </button>
           </div>
         <div className="scroll-section">
-          <ScrollDownComponent hrefTo={'#contact-container'} />
+          <ScrollDownComponent hrefTo={'#contact-container'} color="#0f1920"/>
         </div>
       </div>
     );

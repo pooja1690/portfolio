@@ -60,7 +60,7 @@ class Home extends Component {
       })
     }
   }
-  
+
   render() {
     return (
       <div>
@@ -77,7 +77,7 @@ class Home extends Component {
               A coder who builds to bring a product to reality!
             </p>
           </div>
-          <ScrollDownComponent hrefTo={'#about-me-container'} />
+          <ScrollDownComponent hrefTo={'#about-me-container'} color="#ffffff"/>
           <div className="home-text-container" style={this.handlerCssForContainer()}></div>
         </div>
       </div>

@@ -10,7 +10,7 @@ class ProjectOverlayContent extends Component {
     if (this.props.hideOverlay) {
       return null;
     }
-    if (this.props.forChildEvent < 6) {
+    if (this.props.forChildEvent < 4) {
       return (
         <div className="overlay-main-project-container">
           <div className="overlay-main-project-image">

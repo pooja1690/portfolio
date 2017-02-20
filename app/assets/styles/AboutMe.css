@@ -1,7 +1,7 @@
 #about-me-container {
   width: calc(100vw - 65px);
   height: 100%;
-  background-image: url("https://i.imgsafe.org/6710cc8892.jpg");
+  background-image: url("../images/me.jpg");
   background-size: cover;
 }
 .background-tint {

@@ -8,7 +8,7 @@
   "scripts": {
     "start": "node ./dist/app.js",
     "dev-start": "webpack-dev-server --progress --colors --hot --inline",
-    "build": "NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --color"
+    "build": "node --max-old-space-size=4096 ./node_modules/webpack/bin/webpack --config ./webpack.deployment.config.js --progress --colors"
   },
   "dependencies": {
     "babel-core": "^6.17.0",

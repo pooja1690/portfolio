@@ -73,3 +73,16 @@
   list-style: none;
   padding: 0;
 }
+.hobby-project-description {
+  padding: 3%;
+  text-align: justify;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 22px;
+}
+
+.hobby-project-description p{
+  font-size: 14px;
+  margin: 0 0 10px;
+  font-weight: 200;
+}

@@ -21,7 +21,7 @@ class AboutMe extends Component {
         transitionTimingFunction:'cubic-bezier(0.25,0.1,0.25,1.1)'
       });
   }
-  
+
   render() {
     return (
       <div id="about-me-container">
@@ -51,7 +51,7 @@ class AboutMe extends Component {
               <div className="about-me-content-text">
                 <p>Computer Science major from UTDallas, currently working as a Mobile App Developer at TripCase.
                   My passion for creativity and desire to build the right solutions justifies my proven track record for translating complex ideas into successful products.
-                  <br/><br/>Nobody likes using a broken product, build it right or fix it quick!
+                  <br/><br/>When Im not working, you'll probably find me playing with Photoshop, out hiking far north or driving miles in search for some yumm food!
                 </p>
                 <hr className="about-me-content-rectangle"/>
               </div>
@@ -59,7 +59,7 @@ class AboutMe extends Component {
             </div>
           </div>
           <div style={this.handleCssForContent()}>
-            <ScrollDownComponent hrefTo={'#project-container'} />
+            <ScrollDownComponent hrefTo={'#project-container'} color="#ffffff"/>
           </div>
         </div>
       </div>

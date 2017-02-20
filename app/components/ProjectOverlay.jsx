@@ -27,7 +27,7 @@ class ProjectOverlay extends Component {
   }
 
   changeForNextChildEvent() {
-    if (this.state.forChildEvent < 8) {
+    if (this.state.forChildEvent < 5) {
       this.setState({
         forChildEvent:(this.state.forChildEvent + 1)
       })

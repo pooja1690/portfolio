@@ -32,7 +32,7 @@ class ScrollDownComponent extends Component {
   render() {
     return (
       <div className="scroll-component" style={this.handleCssForContent()}>
-        <a href={this.props.hrefTo} textDecoration="none!important;"><p>scroll</p><hr /></a>
+        <a href={this.props.hrefTo} textDecoration="none!important;" style={{color:this.props.color}}><p>scroll</p><hr /></a>
       </div>
     );
   }
