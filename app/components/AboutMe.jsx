@@ -51,7 +51,7 @@ class AboutMe extends Component {
               <div className="about-me-content-text">
                 <p>Computer Science major from UTDallas, currently working as a Mobile App Developer at TripCase.
                   My passion for creativity and desire to build the right solutions justifies my proven track record for translating complex ideas into successful products.
-                  <br/><br/>When Im not working, you'll probably find me playing with Photoshop, out hiking far north or driving miles in search for some yumm food!
+                  <br/><br/>When Im not "coding", you'll probably find me playing with Photoshop, out hiking far north or driving miles in search for some yumm food!
                 </p>
                 <hr className="about-me-content-rectangle"/>
               </div>

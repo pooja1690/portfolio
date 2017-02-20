@@ -2,7 +2,10 @@
   width: calc(100vw - 65px);
   height: 100%;
   background-color: #1f1f1f;
-  display: table;
+  flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 .contact-email p {
   color: #fff;
@@ -46,11 +49,24 @@ a {
 }
 .contact-content {
   padding-left: 15%;
+  position: relative;
   line-height: 60px;
+  top: 40%;
 }
 .fa {
   color: #fff;
   text-decoration: none!important;
   margin-top: 30px;
   position: absolute;
+}
+.contact-work-specs {
+  position: relative;
+  top: 65%;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 3px;
+  font-weight: 200;
 }

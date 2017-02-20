@@ -15,10 +15,11 @@ class Contact extends Component {
     return (
       <div id="contact-container">
         <div className="contact-content center-vertically">
-        <p className="contact-title">SAY HELLO</p>
-        <div className="contact-email" onClick={this.mailToRedirect}><p>pooja.1690@gmail.com</p><hr /></div>
-        <a href="https://www.linkedin.com/in/pooja-shyam-ashok-kumar/" target="_blank" className="fa fa-linkedin fa-2x"></a>
-      </div>
+          <p className="contact-title">SAY HELLO</p>
+          <div className="contact-email" onClick={this.mailToRedirect}><p>pooja.1690@gmail.com</p><hr /></div>
+          <a href="https://www.linkedin.com/in/pooja-shyam-ashok-kumar/" target="_blank" className="fa fa-linkedin fa-2x"></a>
+        </div>
+        <div className="contact-work-specs">Designed using Photoshop | Built on React framework.</div>
       </div>
     );
   }
