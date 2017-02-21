@@ -7,6 +7,10 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
+
+.contact-email {
+  height: 60px;
+}
 .contact-email p {
   color: #fff;
   font-size: 30px;
@@ -22,7 +26,6 @@
   height: 80px;
   top: -80px;
   left: 25px;
-  float: left;
   margin-top: 0;
   margin-bottom: 0;
   position: relative;
@@ -51,7 +54,7 @@ a {
   padding-left: 15%;
   position: relative;
   line-height: 60px;
-  top: 40%;
+  top: 30%;
 }
 .fa {
   color: #fff;

@@ -12,18 +12,8 @@ class ProjectOverlay extends Component {
       this.changeForPreviousChildEvent = this.changeForPreviousChildEvent.bind(this);
   }
 
-  componentDidMount () {
-    setTimeout(() => {
-      this.changeProjectOverlayValue()
-    }, 1000);
-  }
-
   componentWillReceiveProps(nextProps) {
     this.setState({forChildEvent:Number(nextProps.forChildEvent)})
-  }
-
-  changeProjectOverlayValue() {
-    console.log("overlay render");
   }
 
   changeForNextChildEvent() {

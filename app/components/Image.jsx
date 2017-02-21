@@ -28,7 +28,7 @@ class Image extends Component {
                 imagepath2 = 'https://i.imgsafe.org/67110d9f82.jpg';
                 imagepath3 = 'https://i.imgsafe.org/6710869f68.jpg';
         break;
-      default:console.log("hello3");
+      default:console.log("imagenotfound");
     }
 
     if (childEvent < 4) {

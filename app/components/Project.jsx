@@ -6,7 +6,7 @@ import ScrollDownComponent from './ScrollDownComponent.jsx'
 class FlexChildClass extends Component {
   render() {
     var projectElements = ["iMessage App","Generate PDF Plugin","Onboarding UI", "Sync Status plugin",
-    "Vendor App Design", "Wedding Halls Marketplace design"];
+    "Wedding Halls Marketplace design", "Vendor App Design"];
 
     return (
       <div>
@@ -46,14 +46,6 @@ class Project extends Component {
       shouldCollapse: false
     })
     this.setState({childEvent:e});
-  }
-
-  componentDidMount() {
-    console.log("from inside projects");
-  }
-
-  componentWillAppear() {
-    console.log("from inside projects appear");
   }
 
   render() {
