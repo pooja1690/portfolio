@@ -12,21 +12,21 @@ class Image extends Component {
     var imagepath3 = "../assets/images/app-store.jpg";
 
     switch(childEvent) {
-      case 0 :imagepath = 'https://i.imgsafe.org/671134e2ed.jpg';
+      case 0 :imagepath = 'https://i.imgur.com/lw2AH8K.jpg';
         break;
-      case 1 :imagepath = 'https://i.imgsafe.org/67107d1c7d.jpg';
+      case 1 :imagepath = 'https://i.imgur.com/4HnNsXU.png';
         break;
-      case 2 :imagepath = 'https://i.imgsafe.org/6710b57cc8.jpg';
+      case 2 :imagepath = 'https://i.imgur.com/eXjwAf6.jpg';
         break;
-      case 3 :imagepath = 'https://i.imgsafe.org/67111e5387.jpg';
+      case 3 :imagepath = 'https://i.imgur.com/UT64eum.jpg';
         break;
-      case 4 :imagepath = 'https://i.imgsafe.org/6710ce8d3c.jpg';
-              imagepath2 = 'https://i.imgsafe.org/6710c8f4c6.jpg';
-              imagepath3 = 'https://i.imgsafe.org/6710bd6b93.jpg';
+      case 4 :imagepath = 'https://i.imgur.com/DDKevrN.jpg';
+              imagepath2 = 'https://i.imgur.com/OppkAj7.jpg';
+              imagepath3 = 'https://i.imgur.com/jt3nuCE.jpg';
         break;
-      case 5 :imagepath = 'https://i.imgsafe.org/6710f684e3.jpg';
-                imagepath2 = 'https://i.imgsafe.org/67110d9f82.jpg';
-                imagepath3 = 'https://i.imgsafe.org/6710869f68.jpg';
+      case 5 :imagepath = 'https://i.imgur.com/iwZID1U.png';
+                imagepath2 = 'https://i.imgur.com/pIbQD7I.jpg';
+                imagepath3 = 'https://i.imgur.com/o8C8dHn.jpg';
         break;
       default:console.log("imagenotfound");
     }
